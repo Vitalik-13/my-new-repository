@@ -32,8 +32,8 @@ body {
     flex: 0 0 25%;
     max-width: 25%;
     height: 850px;
-    background-color: #5f93c9;
-    opacity: 0.5;
+    background-color: rgba(154, 199, 247, 0.4);
+    border-right: 1px solid white;
     margin-right: 15px;
 }
 .col-4{
@@ -64,14 +64,11 @@ body{
 }
 .row{
     display: flex;
-    
-   
-  
-    
     margin-left: -15px;
     margin-right: -15px;
     
 }
+
 .scroll{
     border: 1px solid white;
     width: 270px;
@@ -93,22 +90,28 @@ body{
 .menu li{
 width: 25%;
 border-left: 1px solid #2c71b8;
+height: 50px;
+
 }
+
 
 .menu li:last-child {border-right: 1px solid #2c71b8;
     
 }
 
+
+
 .menu a{
     display: flex;
-    height: 50px;
+    height: 40px;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    text-align: center;
     font-size: 21px;
-    color: #2c71b8
-  
+    color: #2c71b8;
 }
+
 .menu a:hover {
     background-color: #2c71b8;
     color: white;
@@ -119,10 +122,11 @@ border-left: 1px solid #2c71b8;
     align-items: center;
     justify-content: space-around;
     border: 1px solid #2c71b8;
+    margin-top: 4px;
     width: 200px;
     height: 40px;
 }
-input{
+.header-input{
     
      background-color:#cadbed;
      border: 0;
@@ -133,7 +137,7 @@ input{
     margin-left: 20px;
     outline: none;
 }
-input::placeholder{
+.header-input::placeholder{
     color: #2c71b8;
     
    
@@ -141,6 +145,7 @@ input::placeholder{
 }
 
 .knopka{
+    
     background-color: #2c71b8;
     width: 30px;
     height: 30px;
@@ -151,7 +156,7 @@ input::placeholder{
 .cart{
     display: flex;
    margin-left: 30px;
-   margin-top: 0;
+   margin-top: 4px;
 
 }
 button{
@@ -174,9 +179,8 @@ button{
 .menu a{
 color:#2c71b8;
 text-decoration: none;
-display: block;
 text-align: center;
-height: 40px;
+height: 50px;
 line-height: 40px;
 transition: all.5s;
 position: relative;
@@ -204,7 +208,7 @@ position: relative;
 .slaider{
     width: 100%;
     height: 400px;
-    background-color: #235a93;
+    background-color:rgba(5, 17, 31, 0.5);
     opacity: 0.5;
     border-bottom: 1px solid white;
    
@@ -214,15 +218,25 @@ position: relative;
     display: flex;
     margin-top: 30px; 
 }
-a{
+.breadcrumbs ul li{
+    margin-top: 10px;
+}
+
+.breadcrumbs ul li a{
     color: #96b8dc;
+    text-decoration: none;
+    font-size: 14px;
+    
+    
 }
 
 .col-8 p{
     color: white;
-    font-size: 41px;
+    font-size: 48px;
     margin-top: 25px;
+    
 }
+
 .product{
  
     margin-top: 60px;
@@ -379,4 +393,18 @@ p{
     background-repeat: no-repeat;
     background-position: auto auto ;
 }
+
+
+  
+
+.breadcrumbs ul li a:hover{
+    text-decoration: underline;
+}
+.kuka{
+    font-size: 14px;
+    color: #96b8dc;
+    text-decoration: none;
+} 
+
+
 
