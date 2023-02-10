@@ -27,8 +27,8 @@
                     <nav>
                         <ul class="menu">
                             <li><a href="">Home</a> </li>
-                            <li>
-                                <a href="" class="one">Products</a>
+                            <li >
+                                <a href="">Products <img src="images/icons8-галочка-16.png" alt=""  class="icon-one"></a>
                                 <ul>
                                     <li><a href="">Lorem impsum dolor</a></li>
                                     <li><a href="">Stamet</a></li>
@@ -53,7 +53,10 @@
                         </button>
                     </div>
                     <div class="cart">
-                          <button><img src="images/img2.png" alt="backpack"></button>
+                          
+                          <div class="button-one">
+                            <div class="number">0</div>
+                          </div>
                     </div>
                     
                 </div> 
@@ -66,7 +69,56 @@
         
         <div class="conteiner" >
             <div class="row">
-                <div class="col-2">
+                <div class="col-2"> 
+                   
+                        <div class="divece-tap">
+                            <p>DIVICE TYPE</p>
+                            <input type="checkbox" id="laptop-device" class="input-device">
+                            <label for="laptop-device">Laptop</label>
+                            <br>
+                            <input type="checkbox" id="tablet-device" class="input-device">
+                            <label for="tablet-device">Tablet</label>
+
+                            <p class="color-ram">COLOR</p>
+
+                            <input type="checkbox"  id="color-black" class="color-device">
+                            <label for="color-black">Black</label>
+                            <br>
+                            <input type="checkbox"  id="color-red" class="color-device">
+                            <label for="color-red">Red</label>
+                            <br>
+                            <input type="checkbox"  id="color-creen" class="color-device">
+                            <label for="color-creen">Green</label>
+                            <br>
+                            <input type="checkbox"  id="color-blue" class="color-device">
+                            <label for="color-blue">Blue</label>
+                            <br>
+                            <input type="checkbox"  id="color-orange" class="color-device">
+                            <label for="color-orange">Orange</label>
+
+                            <p class="color-ram">RAM</p>
+                            <input type="checkbox"  id="ram-1gb" class="color-device">
+                            <label for="ram-1gb">1GB</label>
+                            <br>
+                            <input type="checkbox"  id="ram-2gd" class="color-device">
+                            <label for="ram-2gd">2GB</label>
+                            <br>
+                            <input type="checkbox"  id="ram-4gb" class="color-device">
+                            <label for="ram-4gd">4GB</label>
+                            <br>
+                            <input type="checkbox"  id="ram-6gb" class="color-device">
+                            <label for="ram-6gd">6GB</label>
+                            <br>
+                            <input type="checkbox"  id="ram-8gd" class="color-device">
+                            <label for="ram-8gd">8GB</label>
+
+                            <P class="msg">Show more option...</P>
+                             
+                            <button class="sumbit">SUMBIT</button>
+                             
+                        </div>
+                        
+                   
                 </div>
                 <div class="col-9">
                     <div class="row">
@@ -87,9 +139,9 @@
                     <div class="col-4">
                         <div class="scroll">
                           <ul>
-                            <li> 
-                                <a href="">sort by price</a>
-                                <ul>
+                            <li class="main-drop-menu"> 
+                                <a href="">sort by price <img src="images/icons8-галочка-16.png" alt="" class="icon-two"></a>
+                                <ul class="drop-menu">
                             <li><a href="">sort by name</a></li>
                             <li><a href="">sort by date</a></li>
                             <li><a href="">sort by popularity</a></li> 
@@ -443,11 +495,23 @@
                          
                           
                     </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="the-end">Load more...</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+      
     </main>
-    <footer class="footer"> footer</footer>
-
+    
+    <footer> 
+        
+            <a href="">© Copyright 2017</a>
+        
+    </footer>
+ <script src="./index.js" type="module"></script>
+ <script src="./index2.js" type="module"></script>
 </body>
 </html>
