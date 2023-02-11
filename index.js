@@ -18,4 +18,28 @@ for(let i =0; i < addToCartBtns.length; i++) {
 // })
 // )
 
+let clickLikes = document.querySelectorAll(".heart");
 
+clickLikes.forEach((item) => {
+  item.addEventListener("click", function(){
+      if(item.style.backgroundColor === "" || item.style.backgroundColor === "transparent"){
+          item.style.backgroundColor = " #235a93";
+          item.style.backgroundImage = "url(images/like-white.png)";
+      } else {
+          item.style.backgroundColor = "transparent";
+          item.style.backgroundImage =" url(images/imglike.png)";
+      }
+  })
+})
+
+let forms = document.querySelector(".modal")
+
+let buttons = document.querySelectorAll(".button-next")
+console.log(buttons)
+for(let i =0; i<buttons.length;i++){
+  buttons[i].addEventListener('click',function(){
+   if(buttons[i]='click'){
+    forms.style.displayBlock ="block"
+   }
+  })
+}
