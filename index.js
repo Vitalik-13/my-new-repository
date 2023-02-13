@@ -30,16 +30,38 @@ clickLikes.forEach((item) => {
           item.style.backgroundImage =" url(images/imglike.png)";
       }
   })
+});
+
+
+let Terbota = document.querySelectorAll(".button-next");
+let modal = document.querySelector(".modal")
+let close = document.querySelector(".btn-close")
+
+Terbota.forEach((item)=>item.addEventListener("click", openModal));
+close.addEventListener("click",closeModal)
+
+function openModal (){
+  modal.classList.add("show") 
+modal.classList.remove("hide") 
+}
+
+function closeModal(){
+  modal.classList.add("hide")
+ modal.classList.remove("show")
+}
+
+modal.addEventListener("click",function(e){
+  if(e.target===modal){
+    closeModal()
+  }
 })
 
-let forms = document.querySelector(".modal")
+//slick
+$(".slider-block").slick({
+  autoplay: true,
+  dots:true,
+ 
+});
 
-let buttons = document.querySelectorAll(".button-next")
-console.log(buttons)
-for(let i =0; i<buttons.length;i++){
-  buttons[i].addEventListener('click',function(){
-   if(buttons[i]='click'){
-    forms.style.displayBlock ="block"
-   }
-  })
-}
+
+
