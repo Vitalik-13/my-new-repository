@@ -197,7 +197,8 @@
 
     background-color: transparent;
 }
-.slick-dots li button:hover,
+
+
 .slick-dots li button:focus
 {
     outline: none;
@@ -206,21 +207,25 @@
 .slick-dots li button:hover:before,
 .slick-dots li button:focus:before
 {
-    opacity: 1;
     
+    opacity: 0.1;
+    
+}
+.slick-dots li:hover{
+    background-color: transparent;
 }
 .slick-dots li button:before
 {
     font-family: 'slick';
     font-size: 6px;
     line-height: 20px;
-    background-color: #fff;
+    background-color:#fff;
     position: absolute;
     top: 0;
     left: 0;
 
-    width: 11px;
-    height: 11px;
+    width: 12px;
+    height: 12px;
 
     content: '';
     text-align: center;
@@ -233,6 +238,6 @@
 }
 .slick-dots li.slick-active button:before
 {
-    opacity: .75;
+    opacity: 1;
     color: black;
 }
