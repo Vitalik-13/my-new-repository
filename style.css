@@ -302,6 +302,12 @@ position: relative;
     text-align: center;
     margin-top: 5px;
 }
+.products-input{
+
+  background-color: rgb(44, 96, 150,.25  );
+  border: 1px solid white;
+  color: white;
+}
 
 .product{
  
