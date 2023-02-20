@@ -49,19 +49,96 @@ function closeModal(){
   modal.classList.add("hide")
  modal.classList.remove("show")
 }
+//модальне вікно
 
-modal.addEventListener("click",function(e){
-  if(e.target===modal){
-    closeModal()
-  }
-})
+// modal.addEventListener("click",function(e){
+//   if(e.target===modal){
+//     closeModal()
+   
+//   }
+// })
 
-//slick
+// setTimeout(openModal, 10000)
+
+
+// function showModalByScroll() {
+//   if (window.scrollY >= document.body.scrollHeight / 2) {
+//       openModal();
+//       window.removeEventListener("scroll",showModalByScroll)
+//   }
+// }
+
+// window.addEventListener("scroll", showModalByScroll);
+// //slick
+
 $(".slider-block").slick({
-  autoplay: true,
+  autoplay:true,
   dots:true,
  
 });
 
+AOS.init();
 
+// const decrementBtns = document.querySelectorAll(".decrement-batton")[0]
+// const incrementBtns = document.querySelectorAll(".increment-button")[0]
+// const productsInput = document.querySelectorAll(".products-input")[0]
 
+// function Counter(incrementBtn,decrementBtn, inputFiled){
+//   this.domRefs ={
+//     incrementBtn,
+//     decrementBtn,
+//     inputFiled,
+//   }
+//   this.toggleButnState = function(){
+//     let count = this.domRefs.inputFiled.value
+//     this.domRefs.decrementBtn.disabled = count <=1;
+//     this.domRefs.incrementBtn.disabled = count >=10;
+//   };
+
+//   this.toggleButnState();
+//   this.increment=function(){
+//     this.domRefs.inputFiled.value = +this.domRefs.inputFiled.value+1;
+//     this.toggleButnState()
+//   }
+//   this.decrement=function(){this.domRefs.inputFiled.value = this.domRefs.inputFiled.value-1;
+//     this.toggleButnState()
+//   }
+//   this.domRefs.incrementBtn.addEventListener("click",this.increment.bind(this))
+//   this.domRefs.decrementBtn.addEventListener("click",this.decrement.bind(this))
+// }
+
+// const counter1= new Counter(incrementBtns,decrementBtns,productsInput)
+
+const decrementBtns = document.querySelectorAll(".decrement-batton");
+const incrementBtns = document.querySelectorAll(".increment-button");
+const productsInputs = document.querySelectorAll(".products-input");
+
+function Counter(incrementBtn,decrementBtn, inputFiled){
+  this.domRefs ={
+    incrementBtn,
+    decrementBtn,
+    inputFiled,
+  }
+  this.toggleButnState = function(){
+    let count = this.domRefs.inputFiled.value
+    this.domRefs.decrementBtn.disabled = count <=1;
+    this.domRefs.incrementBtn.disabled = count >=10;
+  };
+
+  this.toggleButnState();
+  this.increment=function(){
+    this.domRefs.inputFiled.value = +this.domRefs.inputFiled.value+1;
+    this.toggleButnState()
+  }
+  this.decrement=function(){this.domRefs.inputFiled.value = this.domRefs.inputFiled.value-1;
+    this.toggleButnState()
+  }
+  this.domRefs.incrementBtn.addEventListener("click",this.increment.bind(this))
+  this.domRefs.decrementBtn.addEventListener("click",this.decrement.bind(this))
+}
+
+const counters = [];
+
+for (let i = 0; i < incrementBtns.length; i++) {
+  counters.push(new Counter(incrementBtns[i], decrementBtns[i], productsInputs[i]));
+}
